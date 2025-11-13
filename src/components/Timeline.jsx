@@ -29,7 +29,7 @@ export default function Timeline() {
       description:
         "Supervised finishing operations, quality control, and production workflows in textile manufacturing.",
       logo: orbitLogo,
-      link: "https://orbitexports.com/", 
+      link: "https://orbitexports.com/",
     },
     {
       title: "Noize Jeans",
@@ -107,7 +107,6 @@ export default function Timeline() {
 // -----------------------------
 // TimelineItem Component
 // -----------------------------
-// TimelineItem Component
 export function TimelineItem({ data, side, type }) {
   const controls = useAnimation();
   const [ref, inView] = useInView({ threshold: 0.1 });
@@ -123,21 +122,44 @@ export function TimelineItem({ data, side, type }) {
       animate={controls}
       transition={{ duration: 0.8 }}
       className={`timeline-item ${side} ${type}`}
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        textAlign: "center",
+        marginBottom: "2.5rem",
+      }}
     >
-      <div className="timeline-content">
-        <div className="timeline-header">
+      <div
+        className="timeline-content"
+        style={{
+          width: "100%",
+          maxWidth: "500px",
+        }}
+      >
+        <div
+          className="timeline-header d-flex flex-column flex-sm-row align-items-center justify-content-center justify-content-sm-start gap-3 mb-2"
+        >
           {data.logo && (
-            <img src={data.logo} alt={data.title} className="timeline-logo" />
+            <img
+              src={data.logo}
+              alt={data.title}
+              className="timeline-logo"
+              style={{
+                width: "60px",
+                height: "60px",
+                objectFit: "contain",
+              }}
+            />
           )}
-          <h4>{data.title}</h4>
+          <h4 style={{ margin: 0 }}>{data.title}</h4>
         </div>
 
         {data.role && <h5 className="role">{data.role}</h5>}
         {data.degree && <h5 className="degree">{data.degree}</h5>}
-        <span className="timeline-duration">{data.duration}</span>
+        <span className="timeline-duration d-block mb-2">{data.duration}</span>
         <p>{data.description}</p>
 
-        {/* Separate line for link, if present */}
         {data.link && (
           <p className="timeline-link">
             <a

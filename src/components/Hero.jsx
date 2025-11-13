@@ -16,7 +16,7 @@ function Hero() {
       }}
     >
       <motion.div
-        className="container d-flex align-items-center justify-content-center position-relative"
+        className="container d-flex flex-column flex-lg-row align-items-center justify-content-center position-relative"
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
@@ -26,14 +26,13 @@ function Hero() {
         <motion.img
           src={profileImg}
           alt="Rushikesh Patil"
-          className="me-5"
+          className="mb-4 mb-lg-0 me-lg-5"
           style={{
             width: "180px",
-            height: "80vh", // full height of container
+            maxWidth: "100%",
+            height: "auto",
             objectFit: "cover",
             objectPosition: "center",
-            // borderRadius: "12px",
-            // boxShadow: "0 0 25px rgba(13, 202, 240, 0.4)",
           }}
           whileHover={{ scale: 1.05, rotateY: 5 }}
           transition={{ duration: 0.4 }}
@@ -41,6 +40,7 @@ function Hero() {
 
         {/* Content on right */}
         <motion.div
+          className="text-center text-lg-start"
           style={{
             maxWidth: "600px",
           }}
@@ -70,7 +70,7 @@ function Hero() {
             extraordinary.
           </p>
 
-          <div className="d-flex gap-3 flex-wrap">
+          <div className="d-flex flex-column flex-sm-row gap-3 justify-content-center justify-content-lg-start">
             <a
               href="https://github.com/Magician3059"
               target="_blank"

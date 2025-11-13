@@ -1,0 +1,74 @@
+.project-card {
+  transition: all 0.3s ease-in-out;
+}
+
+/* ----------------- RESPONSIVE ----------------- */
+@media (max-width: 1200px) {
+  .project-card img {
+    height: 200px !important;
+  }
+
+  .project-card .card-body h5 {
+    font-size: 1rem;
+  }
+
+  .project-card .card-body p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .project-card img {
+    height: 180px !important;
+  }
+
+  .project-card .card-body h5 {
+    font-size: 0.95rem;
+  }
+
+  .project-card .card-body p {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .project-card img {
+    height: 160px !important;
+  }
+
+  .project-card .card-body h5 {
+    font-size: 0.9rem;
+  }
+
+  .project-card .card-body p {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .project-card {
+    margin-bottom: 1.5rem;
+  }
+
+  .project-card img {
+    height: 140px !important;
+  }
+
+  .project-card .card-body h5 {
+    font-size: 0.85rem;
+  }
+
+  .project-card .card-body p {
+    font-size: 0.75rem;
+  }
+
+  .project-card .badge {
+    font-size: 0.7rem;
+    padding: 0.25rem 0.4rem;
+  }
+
+  .project-card .btn {
+    font-size: 0.7rem;
+    padding: 0.25rem 0.6rem;
+  }
+}

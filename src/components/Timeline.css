@@ -54,19 +54,16 @@
   left: -10px;
 }
 
-/* Distinct styles for Experience and Education */
+/* Experience / Education */
 .timeline-item.experience {
-  border-left: 3px solid #17a2b8; /* cyan for experience */
+  border-left: 3px solid #17a2b8;
 }
-
 .timeline-item.experience::after {
   background: #17a2b8;
 }
-
 .timeline-item.education {
-  border-left: 3px solid #28a745; /* green for education */
+  border-left: 3px solid #28a745;
 }
-
 .timeline-item.education::after {
   background: #28a745;
 }
@@ -76,6 +73,7 @@
   font-size: 1.2rem;
   font-weight: 600;
   color: #fff;
+  word-break: break-word;
 }
 
 .timeline-content h5 {
@@ -83,6 +81,7 @@
   font-size: 1rem;
   font-weight: 500;
   color: #ffd700aa;
+  word-break: break-word;
 }
 
 .timeline-duration {
@@ -96,31 +95,97 @@
   color: #eee;
 }
 
-
-
-
-/* Timeline.css */
-
 .timeline-logo {
-  width: 60px;      /* Adjust width as needed */
-  height: 60px;     /* Maintain uniform height */
-  object-fit: contain; /* Keep aspect ratio, no stretching */
-  margin-right: 15px;  /* Space between logo and text */
-  border-radius: 8px;  /* Optional: slightly rounded corners */
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  margin-right: 15px;
+  border-radius: 8px;
 }
 
 .timeline-header {
   display: flex;
   align-items: center;
-  gap: 10px; /* space between logo and title */
+  gap: 10px;
 }
 
 .timeline-link a {
   font-weight: 500;
   text-decoration: underline;
-  color: #17a2b8; /* info color, can adjust */
+  color: #17a2b8;
+}
+.timeline-link a:hover {
+  color: #ffc107;
 }
 
-.timeline-link a:hover {
-  color: #ffc107; /* highlight on hover */
+/* ----------------- RESPONSIVE ----------------- */
+@media (max-width: 1200px) {
+  .timeline-content h4 {
+    font-size: 1.15rem;
+  }
+  .timeline-content h5 {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .timeline-item {
+    width: 80%;
+    left: 50% !important;
+    text-align: center !important;
+    transform: translateX(-50%);
+  }
+
+  .timeline-item::after {
+    left: 50% !important;
+    right: auto !important;
+    transform: translateX(-50%);
+  }
+
+  .timeline-header {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .timeline-logo {
+    margin-right: 0;
+    margin-bottom: 8px;
+  }
+}
+
+/* Timeline vertical line adjustment for mobile */
+@media (max-width: 992px) {
+  .timeline::before {
+    left: 50%;
+    width: 2px; /* thinner line for smaller screens */
+    transform: translateX(-50%);
+  }
+
+  .timeline-item::after {
+    width: 16px;
+    height: 16px;
+    border: 3px solid #000;
+  }
+}
+
+@media (max-width: 576px) {
+  .timeline::before {
+    width: 1.5px; /* even thinner on tiny phones */
+  }
+
+  .timeline-item::after {
+    width: 14px;
+    height: 14px;
+    border: 2px solid #000;
+  }
+
+  .timeline-item {
+    padding: 0.8rem 1rem;
+  }
+
+  .timeline-logo {
+    width: 50px;
+    height: 50px;
+  }
 }
