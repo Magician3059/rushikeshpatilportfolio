@@ -1,0 +1,13 @@
+.transition-navbar {
+  transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
+}
+
+.navbar-show {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.navbar-hide {
+  transform: translateY(-100%);
+  opacity: 0;
+}
