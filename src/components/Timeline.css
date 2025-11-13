@@ -1,0 +1,126 @@
+.timeline {
+  position: relative;
+  padding: 2rem 0;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 4px;
+  background: #ffc107;
+  transform: translateX(-50%);
+}
+
+.timeline-item {
+  position: relative;
+  width: 45%;
+  padding: 1rem 2rem;
+  margin-bottom: 2rem;
+  border-radius: 0.5rem;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  transform-origin: bottom;
+}
+
+.timeline-item.left {
+  left: 0;
+  text-align: right;
+}
+
+.timeline-item.right {
+  left: 55%;
+  text-align: left;
+}
+
+.timeline-item::after {
+  content: "";
+  position: absolute;
+  top: 1.5rem;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 4px solid #000;
+  background: #ffc107;
+}
+
+.timeline-item.left::after {
+  right: -10px;
+}
+
+.timeline-item.right::after {
+  left: -10px;
+}
+
+/* Distinct styles for Experience and Education */
+.timeline-item.experience {
+  border-left: 3px solid #17a2b8; /* cyan for experience */
+}
+
+.timeline-item.experience::after {
+  background: #17a2b8;
+}
+
+.timeline-item.education {
+  border-left: 3px solid #28a745; /* green for education */
+}
+
+.timeline-item.education::after {
+  background: #28a745;
+}
+
+.timeline-content h4 {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.timeline-content h5 {
+  margin: 0.2rem 0;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #ffd700aa;
+}
+
+.timeline-duration {
+  font-size: 0.9rem;
+  color: #ccc;
+  margin-bottom: 0.5rem;
+}
+
+.timeline-content p {
+  font-size: 0.95rem;
+  color: #eee;
+}
+
+
+
+
+/* Timeline.css */
+
+.timeline-logo {
+  width: 60px;      /* Adjust width as needed */
+  height: 60px;     /* Maintain uniform height */
+  object-fit: contain; /* Keep aspect ratio, no stretching */
+  margin-right: 15px;  /* Space between logo and text */
+  border-radius: 8px;  /* Optional: slightly rounded corners */
+}
+
+.timeline-header {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* space between logo and title */
+}
+
+.timeline-link a {
+  font-weight: 500;
+  text-decoration: underline;
+  color: #17a2b8; /* info color, can adjust */
+}
+
+.timeline-link a:hover {
+  color: #ffc107; /* highlight on hover */
+}

@@ -1,35 +1,84 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+// 🧩 External Libraries
+import React from "react";
+import { motion } from "framer-motion";
 
+// 🎨 Styles
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./App.css";
+
+// 🧱 Components
+import Background3D from "./components/Background3D";
+import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
+import About from "./components/About";
+import Skills from "./components/Skills";
+import Timeline from "./components/Timeline";
+import Projects from "./components/Projects";
+import Contact from "./components/Contact";
+import Footer from "./components/Footer";
+
+// 🚀 App Component
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      {/* 🌌 3D Animated Background */}
+      <Background3D />
+
+      {/* 🧭 Navigation */}
+      <Navbar />
+
+      {/* 🦸‍♂️ Hero Section */}
+      <Hero />
+
+      {/* 👤 About Section */}
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+      >
+        <About />
+      </motion.div>
+
+      {/* 💡 Skills Section */}
+      <motion.div
+        initial={{ opacity: 0, rotateX: 10 }}
+        whileInView={{ opacity: 1, rotateX: 0 }}
+        transition={{ duration: 0.8 }}
+      >
+        <Skills />
+      </motion.div>
+
+      {/* 🎓 Education & Experience Section */}
+      <motion.div
+        initial={{ opacity: 0, rotateX: 10 }}
+        whileInView={{ opacity: 1, rotateX: 0 }}
+        transition={{ duration: 0.8 }}
+      >
+        <Timeline />
+      </motion.div>
+
+      {/* 🧩 Projects Section */}
+      <motion.div
+        initial={{ opacity: 0, rotateY: -10 }}
+        whileInView={{ opacity: 1, rotateY: 0 }}
+        transition={{ duration: 0.8 }}
+      >
+        <Projects />
+      </motion.div>
+
+      {/* 📞 Contact Section */}
+      <motion.div
+        initial={{ opacity: 0, y: 80 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+      >
+        <Contact />
+      </motion.div>
+
+      {/* ⚓ Footer */}
+      <Footer />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
