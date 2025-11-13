@@ -22,7 +22,7 @@ const projects = [
     ],
     github: "https://github.com/your-username/Evently",
     live: "",
-    image: "/src/assets/projects/evently.png"
+    image: "/assets/projects/evently.png" // ✅ updated
   },
   {
     id: 2,
@@ -45,7 +45,7 @@ const projects = [
     ],
     github: "https://github.com/your-username/weather-tracker",
     live: "https://mern-city-weather-tracker.vercel.app/",
-    image: "/src/assets/projects/weather-tracker.png"
+    image: "/assets/projects/weather-tracker.png" // ✅ updated
   },
   {
     id: 3,
@@ -61,7 +61,7 @@ const projects = [
     tech: ["React", "Redux Toolkit", "Vite", "Bootstrap"],
     github: "https://github.com/your-username/react-paste-app",
     live: "https://react-application-rho.vercel.app/",
-    image: "/src/assets/projects/react-paste.png"
+    image: "/assets/projects/react-paste.png" // ✅ updated
   },
   {
     id: 4,
@@ -77,7 +77,7 @@ const projects = [
     tech: ["Java", "C++", "MySQL", "DSA"],
     github: "https://leetcode.com/Rushikesh_code987",
     live: "https://leetcode.com/Rushikesh_code987",
-    image: "/src/assets/projects/leetcode.png"
+    image: "/assets/projects/leetcode.png" // ✅ updated
   }
 ];
 

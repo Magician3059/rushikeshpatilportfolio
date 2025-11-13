@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { FaGithub, FaLinkedin, FaCode } from "react-icons/fa";
+import profileImg from "../assets/profile.png";
 
 function Hero() {
   return (
@@ -23,7 +24,7 @@ function Hero() {
       >
         {/* Image on left */}
         <motion.img
-          src="src/assets/profile.png"
+          src={profileImg}
           alt="Rushikesh Patil"
           className="me-5"
           style={{
