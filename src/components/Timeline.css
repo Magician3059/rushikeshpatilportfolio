@@ -169,23 +169,50 @@
   }
 }
 
+/* ----------------- MOBILE SPECIFIC ----------------- */
 @media (max-width: 576px) {
+  /* Remove vertical timeline line */
   .timeline::before {
-    width: 1.5px; /* even thinner on tiny phones */
+    display: none;
   }
 
-  .timeline-item::after {
-    width: 14px;
-    height: 14px;
-    border: 2px solid #000;
-  }
-
+  /* Make timeline items full width */
   .timeline-item {
+    width: 100%;
+    left: 0 !important;
+    transform: none !important;
+    text-align: left !important;
     padding: 0.8rem 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  /* Put everything in one line */
+  .timeline-header {
+    flex-direction: row !important;
+    justify-content: flex-start !important;
+    align-items: center !important;
+    gap: 10px;
+    flex-wrap: wrap;
   }
 
   .timeline-logo {
     width: 50px;
     height: 50px;
+    margin-right: 10px;
+    margin-bottom: 0;
+  }
+
+  .timeline-content h4,
+  .timeline-content h5,
+  .timeline-duration {
+    font-size: 0.95rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .timeline-content p {
+    font-size: 0.85rem;
+    margin-top: 0.25rem;
   }
 }
