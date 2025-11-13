@@ -1,3 +1,5 @@
+
+/* Navbar transition for hide/show */
 .transition-navbar {
   transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
 }
@@ -10,4 +12,19 @@
 .navbar-hide {
   transform: translateY(-100%);
   opacity: 0;
+}
+
+
+/* Small screens adjustments */
+@media (max-width: 576px) {
+  .navbar-nav .nav-link {
+    padding: 0.5rem 1rem;
+    text-align: center;
+  }
+
+  .navbar-collapse {
+    background-color: #212529; /* same as dark bg */
+    padding: 0.5rem 0;
+    border-radius: 0 0 8px 8px;
+  }
 }
