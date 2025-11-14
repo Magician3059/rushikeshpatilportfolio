@@ -3,10 +3,9 @@ import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import "./Timeline.css";
 
-// Logos (put these images in /public/logos or /src/assets/logos)
 import cheggLogo from "../assets/logos/chegg.png";
 import orbitLogo from "../assets/logos/orbit.png";
-import noizeLogo from "../assets/logos/noize.png"; // optional
+import noizeLogo from "../assets/logos/noize.png";
 import textileLearnerLogo from "../assets/logos/textilelearner.png";
 import dkteLogo from "../assets/logos/dkte.png";
 import sunbeamLogo from "../assets/logos/sunbeam.png";
@@ -44,7 +43,8 @@ export default function Timeline() {
       title: "Textile Learner",
       role: "Content Writer",
       duration: "May 2023 – Jul 2023",
-      description: "Wrote technical articles on textile printing & dyeing techniques.",
+      description:
+        "Wrote technical articles on textile printing & dyeing techniques.",
       logo: textileLearnerLogo,
       link: "https://textilelearner.net/internship-in-textile-learner/",
     },
@@ -70,12 +70,15 @@ export default function Timeline() {
   ];
 
   return (
-    <section id="timeline" className="py-5 bg-dark text-light">
-      <div className="container">
-        <h2 className="text-center fw-bold mb-5 text-warning">Timeline</h2>
+    <section id="timeline" className="py-16 bg-gray-900 text-white">
+      <div className="max-w-6xl mx-auto px-4">
+
+        <h2 className="text-center text-4xl font-bold mb-12 text-yellow-400">
+          Timeline
+        </h2>
 
         {/* Experience */}
-        <h3 className="text-info mb-4">Experience</h3>
+        <h3 className="text-blue-400 text-2xl font-semibold mb-6">Experience</h3>
         <div className="timeline">
           {experiences.map((exp, idx) => (
             <TimelineItem
@@ -88,7 +91,9 @@ export default function Timeline() {
         </div>
 
         {/* Education */}
-        <h3 className="text-success mt-5 mb-4">Education</h3>
+        <h3 className="text-green-400 text-2xl font-semibold mt-10 mb-6">
+          Education
+        </h3>
         <div className="timeline">
           {education.map((edu, idx) => (
             <TimelineItem
@@ -104,9 +109,6 @@ export default function Timeline() {
   );
 }
 
-// -----------------------------
-// TimelineItem Component
-// -----------------------------
 export function TimelineItem({ data, side, type }) {
   const controls = useAnimation();
   const [ref, inView] = useInView({ threshold: 0.1 });
@@ -121,52 +123,35 @@ export function TimelineItem({ data, side, type }) {
       initial={{ opacity: 0, y: 50 }}
       animate={controls}
       transition={{ duration: 0.8 }}
-      className={`timeline-item ${side} ${type}`}
-      style={{
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        textAlign: "center",
-        marginBottom: "2.5rem",
-      }}
+      className={`timeline-item ${side} ${type} flex flex-col items-center text-center mb-10`}
     >
-      <div
-        className="timeline-content"
-        style={{
-          width: "100%",
-          maxWidth: "500px",
-        }}
-      >
-        <div
-          className="timeline-header d-flex flex-column flex-sm-row align-items-center justify-content-center justify-content-sm-start gap-3 mb-2"
-        >
+      <div className="timeline-content w-full max-w-md bg-white/10 backdrop-blur-md p-6 rounded-xl border border-white/10 shadow-xl">
+
+        {/* Header */}
+        <div className="timeline-header flex flex-col sm:flex-row items-center justify-center sm:justify-start gap-4 mb-3">
           {data.logo && (
             <img
               src={data.logo}
               alt={data.title}
-              className="timeline-logo"
-              style={{
-                width: "60px",
-                height: "60px",
-                objectFit: "contain",
-              }}
+              className="w-16 h-16 object-contain"
             />
           )}
-          <h4 style={{ margin: 0 }}>{data.title}</h4>
+          <h4 className="text-xl font-semibold">{data.title}</h4>
         </div>
 
-        {data.role && <h5 className="role">{data.role}</h5>}
-        {data.degree && <h5 className="degree">{data.degree}</h5>}
-        <span className="timeline-duration d-block mb-2">{data.duration}</span>
-        <p>{data.description}</p>
+        {data.role && <h5 className="text-lg text-blue-300">{data.role}</h5>}
+        {data.degree && <h5 className="text-lg text-green-300">{data.degree}</h5>}
+
+        <span className="block text-sm text-gray-300 my-2">{data.duration}</span>
+        <p className="text-gray-200">{data.description}</p>
 
         {data.link && (
-          <p className="timeline-link">
+          <p className="mt-3">
             <a
               href={data.link}
               target="_blank"
               rel="noreferrer"
-              className="text-info"
+              className="text-blue-400 hover:text-blue-300 underline"
             >
               {data.title === "Textile Learner"
                 ? "View my work here"
