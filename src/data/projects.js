@@ -17,15 +17,33 @@ const projects = [
       "Express.js",
       "MySQL",
       "MongoDB",
-      "Spring Security",
+      "Spring Security(Using JWT)",
       "Microservices"
     ],
-    github: "https://github.com/your-username/Evently",
+    github: "https://github.com/Event-Management-Project",
     live: "",
-    image: "/assets/projects/evently.png" // ✅ updated
+    image: "/assets/projects/evently.png"
   },
   {
     id: 2,
+    title: "Portfolio Website",
+    date: "Nov 2025",
+    description:
+      "Designed and developed a responsive full-stack portfolio site showcasing projects, skills, certifications, and contact features using React.js and Tailwind CSS.",
+    highlights: [
+      "Interactive UI with smooth transitions and modern layout",
+      "Detailed project pages with tech stacks and demos",
+      "Integrated contact section for collaboration opportunities",
+      "Mobile-first responsive design",
+      "Deployed on Vercel for optimal performance"
+    ],
+    tech: ["React.js", "Tailwind CSS", "Full-Stack", "Responsive Design"],
+    github: "",
+    live: "https://rushikeshpatilportfolio.vercel.app/",
+    image: "/assets/projects/portfolio.png"
+  },
+  {
+    id: 3,
     title: "Weather & City Tracker",
     date: "Oct 2025",
     description:
@@ -43,12 +61,12 @@ const projects = [
       "Bootstrap",
       "OpenWeatherMap API"
     ],
-    github: "https://github.com/your-username/weather-tracker",
+    github: "https://github.com/Magician3059/MERN_City_Weather_Tracker",
     live: "https://mern-city-weather-tracker.vercel.app/",
-    image: "/assets/projects/weather-tracker.png" // ✅ updated
+    image: "/assets/projects/weather-tracker.png"
   },
   {
-    id: 3,
+    id: 4,
     title: "React Paste App",
     date: "Apr 2025",
     description:
@@ -59,12 +77,12 @@ const projects = [
       "Clean and fast UI built with Vite + Bootstrap."
     ],
     tech: ["React", "Redux Toolkit", "Vite", "Bootstrap"],
-    github: "https://github.com/your-username/react-paste-app",
+    github: "https://github.com/Magician3059/ReactApplication-",
     live: "https://react-application-rho.vercel.app/",
-    image: "/assets/projects/react-paste.png" // ✅ updated
+    image: "/assets/projects/react-paste.png"
   },
   {
-    id: 4,
+    id: 5,
     title: "LeetCode Problem Solving",
     date: "Ongoing",
     description:
@@ -75,9 +93,8 @@ const projects = [
       "Profile: Rushikesh_code987"
     ],
     tech: ["Java", "C++", "MySQL", "DSA"],
-    github: "https://leetcode.com/Rushikesh_code987",
     live: "https://leetcode.com/Rushikesh_code987",
-    image: "/assets/projects/leetcode.png" // ✅ updated
+    image: "/assets/projects/leetcode.png"
   }
 ];
 
