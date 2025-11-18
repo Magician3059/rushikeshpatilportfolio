@@ -42,7 +42,7 @@ export default function Timeline() {
     {
       title: "Textile Learner",
       role: "Content Writer",
-      duration: "May 2023 – Jul 2023",
+      duration: "April 2023 – June 2023",
       description:
         "Wrote technical articles on textile printing & dyeing techniques.",
       logo: textileLearnerLogo,
@@ -72,12 +72,10 @@ export default function Timeline() {
   return (
     <section id="timeline" className="py-16 bg-gray-900 text-white">
       <div className="max-w-6xl mx-auto px-4">
-
         <h2 className="text-center text-4xl font-bold mb-12 text-yellow-400">
           Timeline
         </h2>
 
-        {/* Experience */}
         <h3 className="text-blue-400 text-2xl font-semibold mb-6">Experience</h3>
         <div className="timeline">
           {experiences.map((exp, idx) => (
@@ -90,7 +88,6 @@ export default function Timeline() {
           ))}
         </div>
 
-        {/* Education */}
         <h3 className="text-green-400 text-2xl font-semibold mt-10 mb-6">
           Education
         </h3>
@@ -125,9 +122,9 @@ export function TimelineItem({ data, side, type }) {
       transition={{ duration: 0.8 }}
       className={`timeline-item ${side} ${type} flex flex-col items-center text-center mb-10`}
     >
-      <div className="timeline-content w-full max-w-md bg-white/10 backdrop-blur-md p-6 rounded-xl border border-white/10 shadow-xl">
+      {/* ONLY INNER CONTENT — outer box removed */}
+      <div className="w-full max-w-md p-2">
 
-        {/* Header */}
         <div className="timeline-header flex flex-col sm:flex-row items-center justify-center sm:justify-start gap-4 mb-3">
           {data.logo && (
             <img
