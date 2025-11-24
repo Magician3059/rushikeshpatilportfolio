@@ -24,24 +24,36 @@ const projects = [
     live: "",
     image: "/assets/projects/evently.png"
   },
-  {
-    id: 2,
-    title: "Portfolio Website",
-    date: "Nov 2025",
-    description:
-      "Designed and developed a responsive full-stack portfolio site showcasing projects, skills, certifications, and contact features using React.js and Tailwind CSS.",
-    highlights: [
-      "Interactive UI with smooth transitions and modern layout",
-      "Detailed project pages with tech stacks and demos",
-      "Integrated contact section for collaboration opportunities",
-      "Mobile-first responsive design",
-      "Deployed on Vercel for optimal performance"
-    ],
-    tech: ["React.js", "Tailwind CSS", "Full-Stack", "Responsive Design"],
-    github: "",
-    live: "https://rushikeshpatilportfolio.vercel.app/",
-    image: "/assets/projects/portfolio.png"
-  },
+ {
+  id: 2,
+  title: "DocSys — Doctor–Patient Friendly Application",
+  date: "Sep 2025 – Nov 2025",
+  description:
+    "A full-stack healthcare management system designed for doctors to maintain patient records, medical history, treatments, reports, and progress tracking. The platform features an intuitive React-based UI for doctors and a robust Spring Boot backend with secure APIs. It includes file uploads via Cloudinary, JWT authentication, and a clean dashboard experience.",
+  highlights: [
+    "Doctors can add, update, and manage patients along with their medical history, complaints, observations, and case records.",
+    "Built extensive modules: Treatment Records, Follow-up History, Prescription Details, and Medical Reports (with file uploads).",
+    "Integrated Cloudinary for secure report/file storage with preview support.",
+    "Implemented JWT-based login, protected routes, and role-based access.",
+    "Modern and responsive UI using React, Bootstrap 5, and dynamic components for better user experience.",
+    "Backend built with layered architecture (Controller → Service → Repository) using Spring Boot + JPA/Hibernate."
+  ],
+  tech: [
+    "React.js",
+    "Bootstrap 5",
+    "Spring Boot",
+    "Spring Security (JWT)",
+    "MySQL",
+    "Hibernate/JPA",
+    "Cloudinary",
+    "Axios",
+    "Vite"
+  ],
+      github:"https://github.com/DoctorPatientFriendlyApp",
+      live: "https://docsysfrontend.vercel.app/",
+      image: "/assets/projects/doctor-patient.png"
+}
+    ,
   {
     id: 3,
     title: "Weather & City Tracker",
@@ -95,7 +107,25 @@ const projects = [
     tech: ["Java", "C++", "MySQL", "DSA"],
     live: "https://leetcode.com/Rushikesh_code987",
     image: "/assets/projects/leetcode.png"
-  }
+  },
+   {
+    id: 2,
+    title: "Portfolio Website",
+    date: "Nov 2025",
+    description:
+      "Designed and developed a responsive full-stack portfolio site showcasing projects, skills, certifications, and contact features using React.js and Tailwind CSS.",
+    highlights: [
+      "Interactive UI with smooth transitions and modern layout",
+      "Detailed project pages with tech stacks and demos",
+      "Integrated contact section for collaboration opportunities",
+      "Mobile-first responsive design",
+      "Deployed on Vercel for optimal performance"
+    ],
+    tech: ["React.js", "Tailwind CSS", "Full-Stack", "Responsive Design"],
+    github: "",
+    live: "https://rushikeshpatilportfolio.vercel.app/",
+    image: "/assets/projects/portfolio.png"
+  },
 ];
 
 export default projects;
