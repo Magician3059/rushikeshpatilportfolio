@@ -32,31 +32,31 @@ export default function Contact() {
     <section id="contact" className="py-5 text-light bg-dark">
       <div className="container">
         <h2 className="fw-bold mb-5 text-warning text-center">
-          Get in Touch
+        Let’s Build Something Together
         </h2>
 
         <div className="row align-items-center justify-content-center g-5">
 
-          {/* LEFT — ROBOT SPLINE */}
-          <div className="col-lg-5 d-none d-lg-block">
+          {/* ROBOT SPLINE - Responsive */}
+          <div className="col-12 col-md-6 col-lg-5">
             <motion.div
               initial={{ opacity: 0, x: 40 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
               style={{
-                height: "500px",              
-                // borderRadius: "20px",
-                 overflow: "visible",
-                 position: "relative", // required for stacking
-                // background: "rgba(255,255,255,0.03)",
+                height: "400px",
+                maxWidth: "500px",
+                margin: "0 auto",
+                overflow: "visible",
+                position: "relative",
               }}
             >
               <Spline scene="https://prod.spline.design/qWougliBT85bnyUu/scene.splinecode" />
             </motion.div>
           </div>
 
-          {/* RIGHT — CONTACT DETAILS + FORM */}
-          <div className="col-lg-6 col-md-10">
+          {/* CONTACT DETAILS + FORM */}
+          <div className="col-12 col-md-10 col-lg-6">
 
             {/* Contact Info */}
             <motion.div
@@ -71,10 +71,7 @@ export default function Contact() {
               </p>
               <p>
                 <strong>Email:</strong>{" "}
-                <a
-                  href="mailto:rushikeshpatil@gmail.com"
-                  className="text-light"
-                >
+                <a href="mailto:rushikeshpatil@gmail.com" className="text-light">
                   rushikeshpatil@gmail.com
                 </a>
               </p>
@@ -126,14 +123,21 @@ export default function Contact() {
               </button>
 
               {status && (
-                <p className="mt-3 text-success text-center">
-                  {status}
-                </p>
+                <p className="mt-3 text-success text-center">{status}</p>
               )}
             </motion.form>
           </div>
         </div>
       </div>
+
+      {/* Responsive height adjustment */}
+      <style jsx>{`
+        @media (max-width: 768px) {
+          .spline-container {
+            height: 300px !important;
+          }
+        }
+      `}</style>
     </section>
   );
 }
